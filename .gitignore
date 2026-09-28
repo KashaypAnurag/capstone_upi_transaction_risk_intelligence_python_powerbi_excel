@@ -1,0 +1,14 @@
+# Python / Jupyter Notebook recovery states  
+.ipynb_checkpoints/  
+*/.ipynb_checkpoints/*  
+__pycache__/  
+*.pyc  
+# Local operating system junk files  
+.DS_Store  
+.DS_Store?  
+Thumbs.db  
+ehthumbs.db  
+# Temporary Microsoft Excel lock files  
+~$*.xlsx  
+~$*.xls  
+~$*.csv 
