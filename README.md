@@ -1,4 +1,4 @@
- # UPI Transaction Intelligence and Risk Mitigation Engine
+# UPI Transaction Intelligence and Risk Mitigation Engine
 
 This repository contains an end-to-end data analytics, statistical auditing, and business intelligence project. The primary objective is to analyze transaction failures, identify system vulnerabilities, and isolate fraud patterns across a 100,000-node database spanning from October 2020 to August 2025.
 
@@ -65,18 +65,8 @@ By applying a 75th percentile filter to customer transaction frequency (equal to
 
 ## Executive Business Intelligence Architecture
 
-The visual reporting engine links these separate database components through an optimized Star Schema model inside Power BI. This enforces clean relational links without generating redundant data rows.
+The visual reporting engine links these separate database components through an optimized Star Schema layout inside Power BI. This design enforces clean relational boundaries, prevents redundant data metrics, and ensures fast report queries.
 
-### Executive Visual Views
+The central fact table containing the core transactional records links directly to the lookup dimensions for customers, devices, accounts, and merchants using single-direction relationships. To maintain professional code hygiene and optimize engine calculation speed, all calculated business logic is isolated within a dedicated data measures repository rather than scattered across raw tables. 
 
-#### 1. Platform Navigation Gateway
-Establishes clear, role-based entry paths for risk analysts and operational managers, keeping dashboard navigation secure and organized.
-![Dashboard View 0](documentation_assets/powerbi_landing_gateway.png)
-
-#### 2. Operational Risk Hub
-Tracks overall system performance metrics, highlighting the 5.87% global failure rate, the 2.00% fraud baseline, and a 3.31 customer satisfaction score.
-![Dashboard View 1](documentation_assets/powerbi_operational_hub.png)
-
-#### 3. Threat Operations Center
-Links maps, merchant risk metrics, and device data together. Clicking any data point instantly updates the entire view to help track active threats.
-![Dashboard View 2](documentation_assets/powerbi_threat_matrix.png)
+The interactive dashboard engine delivers multi-tier analytical reporting split into an administration landing gateway, a performance overview hub tracking platform health metrics, and a dedicated threat operations matrix connecting geographic, merchant, and device metrics to isolate platform threats in real time.
